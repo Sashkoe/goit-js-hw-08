@@ -110,10 +110,6 @@ function onGalleryListClick(evt) {
   });
 }
 
-
-
-
-
 //   const galleryList = document.querySelector('.gallery');
 //   const imagesMarkup = createImageMarkup(images);
 
@@ -125,33 +121,19 @@ function onGalleryListClick(evt) {
 //     .map(({preview,original,description}) =>{
 //       return `
 //       <li class="gallery-item">
-//   <a class="gallery-link" href="large-image.jpg">
+//   <a class="gallery-link" href="href="${original}"">
 //     <img
 //       class="gallery-image"
-//       src="small-image.jpg"
-//       data-source="large-image.jpg"
-//       alt="Image description"
+//       src="${preview}"
+//       data-source="${original}"
+//       alt="${description}"
 //     />
 //   </a>
 // </li> `;
 //  })
 //  .join('');
 //   }
-//   function onGalleryListClick(evt){
-//     evt.preventDefault();
-//     if (evt.target.nodeName !== "IMG"){
-// return;
-//     }
-//     const href = evt.target.closest('.gallary-item').querySelector('.gallery-link').href;
-//     const instance = basicLightbox.create(`<img src="${href}" width= "800" height="600">`);
-//     instance.show();
-//     window.addEventListener("keydown", (evt) => {
-//       if (evt.code === "Escape"){
-//         instance.close();
-
-//       }
-//     });
-//   }
+ 
 // function onGalleryListClick(evt) {
 //   evt.preventDefault();
 
@@ -171,3 +153,8 @@ function onGalleryListClick(evt) {
 //     }
 //   });
 // }
+
+
+
+
+
