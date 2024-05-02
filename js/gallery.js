@@ -63,3 +63,27 @@ const images = [
       description: 'Lighthouse Coast Sea',
     },
   ];
+
+  const galleryList = document.querySelector('.gallery');
+  const imagesMarkup = createImageMarkup(images);
+  
+  galleryList.innerHTML = imagesMarkup;
+  galleryList.addEventListener('click', onGalleryListClick);
+
+  function createImageMarkup(images){
+    return images 
+    .map(({preview,original,description}) =>{
+      return `
+      <li class="gallery-item">
+  <a class="gallery-link" href="large-image.jpg">
+    <img
+      class="gallery-image"
+      src="small-image.jpg"
+      data-source="large-image.jpg"
+      alt="Image description"
+    />
+  </a>
+</li> `;
+ })
+ .join('');
+  }
