@@ -66,7 +66,7 @@ const images = [
 
   const galleryList = document.querySelector('.gallery');
   const imagesMarkup = createImageMarkup(images);
-  
+
   galleryList.innerHTML = imagesMarkup;
   galleryList.addEventListener('click', onGalleryListClick);
 
@@ -87,3 +87,37 @@ const images = [
  })
  .join('');
   }
+//   function onGalleryListClick(evt){
+//     evt.preventDefault();
+//     if (evt.target.nodeName !== "IMG"){
+// return;
+//     }
+//     const href = evt.target.closest('.gallary-item').querySelector('.gallery-link').href;
+//     const instance = basicLightbox.create(`<img src="${href}" width= "800" height="600">`);
+//     instance.show();
+//     window.addEventListener("keydown", (evt) => {
+//       if (evt.code === "Escape"){
+//         instance.close();
+
+//       }
+//     });
+//   }
+function onGalleryListClick(evt) {
+  evt.preventDefault();
+
+  if (evt.target.nodeName !== "IMG") {
+    return;
+  }
+
+  const href = evt.target.closest('.gallery-item').querySelector('.gallery-link').href;
+
+  const instance = basicLightbox.create(`<img src="${href}" width="800" height="600">`);
+
+  instance.show();
+
+  window.addEventListener("keydown", (evt) => {
+    if (evt.code === "Escape") {
+      instance.close();
+    }
+  });
+}
