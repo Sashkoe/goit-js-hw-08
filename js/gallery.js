@@ -110,49 +110,6 @@ function onGalleryListClick(evt) {
   });
 }
 
-//   const galleryList = document.querySelector('.gallery');
-//   const imagesMarkup = createImageMarkup(images);
-
-//   galleryList.innerHTML = imagesMarkup;
-//   galleryList.addEventListener('click', onGalleryListClick);
-
-//   function createImageMarkup(images){
-//     return images 
-//     .map(({preview,original,description}) =>{
-//       return `
-//       <li class="gallery-item">
-//   <a class="gallery-link" href="href="${original}"">
-//     <img
-//       class="gallery-image"
-//       src="${preview}"
-//       data-source="${original}"
-//       alt="${description}"
-//     />
-//   </a>
-// </li> `;
-//  })
-//  .join('');
-//   }
- 
-// function onGalleryListClick(evt) {
-//   evt.preventDefault();
-
-//   if (evt.target.nodeName !== "IMG") {
-//     return;
-//   }
-
-//   const href = evt.target.closest('.gallery-item').querySelector('.gallery-link').href;
-
-//   const instance = basicLightbox.create(`<img src="${href}" width="800" height="600">`);
-
-//   instance.show();
-
-//   window.addEventListener("keydown", (evt) => {
-//     if (evt.code === "Escape") {
-//       instance.close();
-//     }
-//   });
-// }
 
 
 
